@@ -6,33 +6,44 @@ using System.Threading.Tasks;
 
 namespace Torres_de_Hanoi
 {
+    //---------------------------------------------------------------------------------------------------//
+    //---------------------------------------------------------------------------------------------------//
+    //                                         CLASE PILA                                                //
+    //---------------------------------------------------------------------------------------------------//
+    //---------------------------------------------------------------------------------------------------//
+  
     class Pila
     {
-        public int Size { get; set; }
-        /* TODO: Elegir tipo de Top
-        public int Top { get; set; }
-        public String Top { get; set; }        
-        */
-        /* TODO: Elegir tipo de Elementos
-        public Disco[] Elementos { get; set; }
-        public List<Disco> Elementos { get; set; }
-        */
 
-        /* TODO: Implementar métodos */
+        //--------------------------------------------------------------------------------------//
+        //----------------------------------- PROPIEDADES --------------------------------------//
+
+        public int Size { get; set; } //Tamaño --> Cantidad de discos que hay en el palo.
+
+        public int Top { get; set; } //Top ---> Disco que está en la parte superior del palo.
+
+        public List<Disco> Elementos { get; set; } //Elementos ---> Conjunto de discos que hay en ese palo.
+
+
+        //--------------------------------------------------------------------------------------//
+        //------------------------------------- MÉTODOS ----------------------------------------//
+
+        //----------- CONSTRUCTOR -----------//
+
         public Pila()
         {
-
+            
         }
 
-        public void push(Disco d)
+        public void anyadirDisco(Disco d)
         {
-
+           
         }
 
-        public Disco pop()
+        public Disco extraerDisco()
         {
             return null;
-        }                
+        }
 
         public bool isEmpty()
         {
@@ -40,4 +51,7 @@ namespace Torres_de_Hanoi
         }
 
     }
+    //--------------------------------------------------------------------------------------//
+    //--------------------------------------------------------------------------------------//
+    //--------------------------------------------------------------------------------------//
 }
