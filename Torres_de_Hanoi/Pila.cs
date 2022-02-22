@@ -11,7 +11,7 @@ namespace Torres_de_Hanoi
     //                                         CLASE PILA                                                //
     //---------------------------------------------------------------------------------------------------//
     //---------------------------------------------------------------------------------------------------//
-  
+
     class Pila
     {
 
@@ -32,22 +32,44 @@ namespace Torres_de_Hanoi
 
         public Pila()
         {
-            
+            this.Size = 0;
         }
 
+        public Pila(List<Disco> listaDiscos)
+        {
+            this.Elementos = listaDiscos;
+            this.Size = listaDiscos.Count;
+            this.Top = listaDiscos.Count - 1;
+        }
+
+        //--------------------------------------------------------------------------------------//
+        //------------------------------------ ANYADIRDISCO -------------------------------------//
         public void anyadirDisco(Disco d)
         {
-           
+            Elementos.Add(d);
+            this.Top = d.Valor;
+            this.Size = Elementos.Count;
         }
 
+        //--------------------------------------------------------------------------------------//
+        //------------------------------------ EXTRAERDISCO -------------------------------------//
         public Disco extraerDisco()
         {
+            Elementos.Remove(Elementos[Elementos.Count - 1]);
+            this.Top = Elementos.Count - 1;
+            this.Size = Elementos.Count;
             return null;
         }
 
+        //----------------------------------------------------------------------------------------//
+        //--------------------------------------- ISEMPTY ----------------------------------------//
         public bool isEmpty()
         {
-            return true;
+            if (Elementos.Count == 0)
+            {
+                return true;
+            }
+            return false;
         }
 
     }
