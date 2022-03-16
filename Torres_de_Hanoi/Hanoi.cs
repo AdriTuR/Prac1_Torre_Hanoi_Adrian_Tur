@@ -15,7 +15,7 @@ namespace Torres_de_Hanoi
         //------------------------------------- MOVERDISCO ---------------------------------------//
         public void mover_disco(Pila a, Pila b)
         {
-            if(a.getTop() < b.getTop() || b.isEmpty())
+            if(a.Top < b.Top || b.isEmpty())
             {
                 b.anyadirDisco(a.extraerDisco());
                 movimientos++;

@@ -1,0 +1,8 @@
+C:\Users\Adria\ALGORITMICA - PRÁCTICAS\Prac1_Torre_Hanoi_Adrian_Tur\Torres_de_Hanoi\obj\Debug\Torres_de_Hanoi.csproj.AssemblyReference.cache
+C:\Users\Adria\ALGORITMICA - PRÁCTICAS\Prac1_Torre_Hanoi_Adrian_Tur\Torres_de_Hanoi\obj\Debug\Torres_de_Hanoi.csproj.SuggestedBindingRedirects.cache
+C:\Users\Adria\ALGORITMICA - PRÁCTICAS\Prac1_Torre_Hanoi_Adrian_Tur\Torres_de_Hanoi\obj\Debug\Torres_de_Hanoi.csproj.CoreCompileInputs.cache
+C:\Users\Adria\ALGORITMICA - PRÁCTICAS\Prac1_Torre_Hanoi_Adrian_Tur\Torres_de_Hanoi\bin\Debug\Torres_de_Hanoi.exe.config
+C:\Users\Adria\ALGORITMICA - PRÁCTICAS\Prac1_Torre_Hanoi_Adrian_Tur\Torres_de_Hanoi\bin\Debug\Torres_de_Hanoi.exe
+C:\Users\Adria\ALGORITMICA - PRÁCTICAS\Prac1_Torre_Hanoi_Adrian_Tur\Torres_de_Hanoi\bin\Debug\Torres_de_Hanoi.pdb
+C:\Users\Adria\ALGORITMICA - PRÁCTICAS\Prac1_Torre_Hanoi_Adrian_Tur\Torres_de_Hanoi\obj\Debug\Torres_de_Hanoi.exe
+C:\Users\Adria\ALGORITMICA - PRÁCTICAS\Prac1_Torre_Hanoi_Adrian_Tur\Torres_de_Hanoi\obj\Debug\Torres_de_Hanoi.pdb
