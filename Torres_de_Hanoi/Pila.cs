@@ -33,13 +33,23 @@ namespace Torres_de_Hanoi
         public Pila()
         {
             this.Size = 0;
+            this.Top = null;
         }
 
+        /*
         public Pila(List<Disco> listaDiscos)
         {
             this.Elementos = listaDiscos;
             this.Size = listaDiscos.Count;
-            this.Top = listaDiscos.Count - 1;
+            this.Top = listaDiscos[listaDiscos.Count - 1];
+        }*/
+
+         //----------------------------------------------------------------------------------------//
+        //--------------------------------------- GETTOP ------------------------------------------//
+
+        public int getTop()
+        {
+            return this.Top;
         }
 
         //--------------------------------------------------------------------------------------//
@@ -55,10 +65,13 @@ namespace Torres_de_Hanoi
         //------------------------------------ EXTRAERDISCO -------------------------------------//
         public Disco extraerDisco()
         {
-            Elementos.Remove(Elementos[Elementos.Count - 1]);
-            this.Top = Elementos.Count - 1;
+            int indice = Elementos.Count - 1;
+            Disco discoTop = Elementos[indice];
+            
+            Elementos.Remove(Elementos[indice]);
+            this.Top = Elementos[indice];
             this.Size = Elementos.Count;
-            return null;
+            return discoTop;
         }
 
         //----------------------------------------------------------------------------------------//
