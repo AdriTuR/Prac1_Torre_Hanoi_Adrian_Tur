@@ -50,12 +50,21 @@ namespace Torres_de_Hanoi
         //------------------------------------ EXTRAERDISCO -------------------------------------//
         public Disco extraerDisco()
         {
-            int indice = Elementos.Count - 1;
-            Disco discoTop = Elementos[indice];
+            Disco discoTop = Elementos.Last();
             
-            this.Elementos.Remove(Elementos[indice]);
+            //Actualizarción de la pila
+            this.Elementos.Remove(discoTop);
             this.Size = Elementos.Count;
-            this.Top = Elementos[Elementos.Count - 1].Valor;
+
+            if(Elementos.Count == 0)
+            {
+                this.Top = 0;
+            }
+            else
+            {
+                this.Top = Elementos.Last().Valor;
+            }
+            
             return discoTop;
         }
 

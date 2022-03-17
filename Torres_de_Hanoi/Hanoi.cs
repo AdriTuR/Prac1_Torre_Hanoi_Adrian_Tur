@@ -25,11 +25,22 @@ namespace Torres_de_Hanoi
         //------------------------------------- MOVERDISCO ---------------------------------------//
         public void mover_disco(Pila a, Pila b)
         {
-            if(a.Top < b.Top || b.isEmpty())
+            if(a.isEmpty())
+            {
+                a.anyadirDisco(b.extraerDisco());
+                movimientos++;
+            }
+            else if (b.isEmpty())
             {
                 b.anyadirDisco(a.extraerDisco());
                 movimientos++;
-            }else
+            }
+            else if (a.Top < b.Top)
+            {
+                b.anyadirDisco(a.extraerDisco());
+                movimientos++;
+            }
+            else
             {
                 a.anyadirDisco(b.extraerDisco());
                 movimientos++;
@@ -40,17 +51,17 @@ namespace Torres_de_Hanoi
         //------------------------------------- ITERATIVO ----------------------------------------//
         public int iterativo(int n, Pila ini, Pila fin, Pila aux)
         {
-            
+            mostrarPilas(ini, aux, fin);
+
             if(n % 2 == 0)
             {
-                while(fin.Size != n)
+                while(fin.Size != n )
                 {
-                    mostrarPilas(ini, aux, fin);
                     mover_disco(ini, aux);
                     mostrarPilas(ini, aux, fin);
                     mover_disco(ini, fin);
                     mostrarPilas(ini, aux, fin);
-                    mover_disco(aux, fin); 
+                    mover_disco(aux, fin);
                     mostrarPilas(ini, aux, fin);
                 }
             }
@@ -58,7 +69,6 @@ namespace Torres_de_Hanoi
             {
                 while(fin.Size != n)
                 {
-                    mostrarPilas(ini, aux, fin);
                     mover_disco(ini, fin);
                     mostrarPilas(ini, aux, fin);
                     mover_disco(ini, aux);
@@ -67,12 +77,13 @@ namespace Torres_de_Hanoi
                     mostrarPilas(ini, aux, fin);
                 }
             }
-            return movimientos;
+            int total_movimientos = this.movimientos;
+            return total_movimientos;
         }
 
         //----------------------------------------------------------------------------------------//
         //----------------------------------- MOSTRARPILAS ---------------------------------------//
-        public void mostrarPilas(Pila ini, Pila fin, Pila aux)
+        public void mostrarPilas(Pila ini, Pila aux, Pila fin)
         {
                     Console.Write(" [ ");
                     for(int i=0;i<ini.Elementos.Count;i++) 

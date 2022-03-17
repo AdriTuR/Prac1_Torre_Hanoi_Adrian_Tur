@@ -39,21 +39,16 @@ namespace Torres_de_Hanoi
                 Ini.anyadirDisco(d);
             }
 
-            /*
-            Console.WriteLine(Ini.Size);
-            Console.WriteLine(Ini.Top);
-
-            //MOSTRAR LISTA CON LOS DISCOS DE LA PILA INI
-            for(int i=0;i<Ini.Elementos.Count;i++) 
-            {
-                Console.Write(Ini.Elementos[i].Valor);
-            }*/
-
             //Inicialización de Hanoi
             Hanoi hanoi = new Hanoi();
             int totalmovimientos = hanoi.iterativo(numero_discos, Ini, Fin, Aux);
-            Console.Write("Movimientos totales: ");
+
+
+            Console.WriteLine("-----------------------------------------------------------------------");
+            Console.Write("  Movimientos totales: ");
             Console.Write(totalmovimientos);
+            Console.WriteLine();
+            Console.WriteLine("-----------------------------------------------------------------------");
             Console.ReadLine();
         }
     }
