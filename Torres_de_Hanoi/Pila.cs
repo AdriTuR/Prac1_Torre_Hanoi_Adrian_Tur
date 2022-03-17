@@ -34,13 +34,14 @@ namespace Torres_de_Hanoi
         {
             this.Size = 0;
             this.Top = 0;
+            this.Elementos = new List<Disco>();
         }
 
         //--------------------------------------------------------------------------------------//
         //------------------------------------ ANYADIRDISCO -------------------------------------//
         public void anyadirDisco(Disco d)
         {
-            Elementos.Add(d);
+            this.Elementos.Add(d);
             this.Top = d.Valor;
             this.Size = Elementos.Count;
         }
@@ -52,9 +53,9 @@ namespace Torres_de_Hanoi
             int indice = Elementos.Count - 1;
             Disco discoTop = Elementos[indice];
             
-            Elementos.Remove(Elementos[indice]);
-            this.Top = Elementos[indice].Valor;
+            this.Elementos.Remove(Elementos[indice]);
             this.Size = Elementos.Count;
+            this.Top = Elementos[Elementos.Count - 1].Valor;
             return discoTop;
         }
 
