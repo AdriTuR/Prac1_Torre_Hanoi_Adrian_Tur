@@ -42,14 +42,23 @@ namespace Torres_de_Hanoi
             //Inicialización de Hanoi
             Hanoi hanoi = new Hanoi();
             int totalmovimientos = hanoi.iterativo(numero_discos, Ini, Fin, Aux);
-
+            double demostracion = Math.Pow(2, Convert.ToDouble(numero_discos)) - 1;
 
             Console.WriteLine("-----------------------------------------------------------------------");
             Console.Write("  Movimientos totales: ");
             Console.Write(totalmovimientos);
             Console.WriteLine();
+            Console.Write("  Demostración matemática: ");
+            Console.Write("(2^");
+            Console.Write(numero_discos);
+            Console.Write(")-1= ");
+            Console.Write(demostracion);
+            Console.WriteLine();
             Console.WriteLine("-----------------------------------------------------------------------");
+
             Console.ReadLine();
+
+            
         }
     }
 }
